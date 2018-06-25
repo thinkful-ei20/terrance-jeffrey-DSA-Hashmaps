@@ -1,3 +1,6 @@
+
+const HashMap =  require('./hash-map');
+
 function checkPalindrome(str){
   const word = new HashMap();
   let uniqueChars = '';
@@ -35,3 +38,5 @@ function checkPalindrome(str){
   }
   return counter === 0 || (counter === 1 && str.length%2 === 1) ? true : false;
 }
+
+console.log(JSON.stringify(checkPalindrome('ahnnah'), null, 2));
