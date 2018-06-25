@@ -25,12 +25,14 @@ class HashMap {
 
     const index = this._findSlot(key);
     console.log(`'setIndex=${index}`);
+    if (this._slots[index]) {
+      this.length++;
+    }
     this._slots[index] = {
       key,
       value,
       deleted: false
     };
-    this.length++;
   }
 
   remove(key) {
