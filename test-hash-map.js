@@ -6,4 +6,4 @@ const lor = new HashMap();
 lor.set('Hobbit', 'Bilbo');
 lor.set('Hobbit', 'Frodo');
 
-console.log(lor);
+console.log(JSON.stringify(lor, null, 2));
