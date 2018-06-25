@@ -1,3 +1,5 @@
+'use strict';
+
 const HashMap = require('./hash-map');
 
 const anagramList = [
@@ -35,8 +37,10 @@ const groupAnagrams = (words) => {
       val.push(word);
       anagrams.remove(sorted);
       anagrams.set(sorted, val);
+      console.log('Sorted + val: ', sorted, val);
     }
-    catch(err) {
+    catch (err) {
+      console.log('Unique Found!');
       uniques.push(sorted);
       anagrams.set(sorted, [word]);
     }
